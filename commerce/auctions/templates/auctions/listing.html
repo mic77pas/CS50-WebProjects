@@ -1,0 +1,75 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>{{ listing.title }}</h2>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if listing.image_url %}
+        <img src="{{ listing.image_url }}" class="img-fluid mb-3" style="max-width: 400px;">
+    {% endif %}
+
+    <p>{{ listing.description }}</p>
+    <p><strong>Category:</strong> {{ listing.category }}</p>
+    <p><strong>Listed by:</strong> {{ listing.owner }}</p>
+
+    <p>
+        <strong>Current Price:</strong>
+        {% if listing.bids.last %}
+            ${{ listing.bids.last.amount }}
+        {% else %}
+            ${{ listing.starting_bid }}
+        {% endif %}
+    </p>
+
+    {% if user.is_authenticated %}
+        <form method="post" class="mb-3">
+            {% csrf_token %}
+            <button name="toggle_watchlist" class="btn btn-outline-secondary" type="submit">
+                {% if in_watchlist %}Remove from Watchlist{% else %}Add to Watchlist{% endif %}
+            </button>
+        </form>
+
+        {% if listing.active and not is_owner %}
+            <form method="post" class="mb-3">
+                {% csrf_token %}
+                {{ bid_form.as_p }}
+                <button name="place_bid" class="btn btn-success" type="submit">Place Bid</button>
+            </form>
+        {% endif %}
+
+        {% if is_owner and listing.active %}
+            <form method="post" class="mb-3">
+                {% csrf_token %}
+                <button name="close_auction" class="btn btn-danger" type="submit">Close Auction</button>
+            </form>
+        {% endif %}
+
+        {% if not listing.active and is_winner %}
+            <div class="alert alert-success">Congratulations! You won this auction.</div>
+        {% endif %}
+
+        <h4>Add a Comment:</h4>
+        <form method="post" class="mb-3">
+            {% csrf_token %}
+            {{ comment_form.as_p }}
+            <button name="add_comment" class="btn btn-primary" type="submit">Comment</button>
+        </form>
+    {% endif %}
+
+    <h4>Comments:</h4>
+    {% for comment in comments %}
+        <div class="border p-2 mb-2">
+            <strong>{{ comment.commenter.username }}</strong> on {{ comment.timestamp|date:"Y-m-d H:i" }}:
+            <p>{{ comment.content }}</p>
+        </div>
+    {% empty %}
+        <p>No comments yet.</p>
+    {% endfor %}
+{% endblock %}
