@@ -1,0 +1,33 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+  {% if user.is_authenticated %}
+    <div class="container my-3" style="text-align: left;">
+      <h5>New Post</h5>
+      <textarea id="new-post-content" class="form-control mb-2" rows="3" placeholder="What's on your mind?"></textarea>
+      <button class="btn btn-primary" id="submit-post">Post</button>
+    </div>
+  {% endif %}
+
+  <hr style="margin: 30px 0px 30px 0px; border-top: 2px dotted lightgray"> 
+
+
+  <div class="container">
+    <h5 id="feed-title">All Posts</h5>
+    <div id="posts-container"></div>
+
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        <li class="page-item" id="prev-page"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item" id="next-page"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+  </div>
+
+{% endblock %}
+
+{% block script %}
+  <script src="{% static 'network/main.js' %}"></script>
+{% endblock %}

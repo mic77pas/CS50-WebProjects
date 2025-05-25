@@ -1,0 +1,25 @@
+textarea {
+    min-height: 400px;
+}
+
+#inbox, #compose, #sent, #archived {
+    text-align: left;
+    width: 100px;
+}
+
+.email-entry {
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.email-entry.unread {
+  background-color: white;
+}
+
+.email-entry.read {
+  background-color: #e6e6e6;
+}
+
+.email-entry:hover {
+  background-color: #f5f5f5;
+}

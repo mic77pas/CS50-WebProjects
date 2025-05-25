@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Page Not Found
+{% endblock %}
+
+{% block body %}
+    <h2>Oops!</h2>
+    <p>The page "{{ title }}" does not exist.</p>
+    <a href="{% url 'index' %}" class="btn btn-secondary">Back to Home</a>
+{% endblock %}
