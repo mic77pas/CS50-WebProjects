@@ -2,6 +2,10 @@
 
 This repository contains a collection of full-stack web applications built as part of Harvard's [CS50 Web Programming with Python and JavaScript](https://cs50.harvard.edu/web/) course. Each project demonstrates key web development concepts including front-end design, back-end integration, authentication, Django, and JavaScript interactivity.
 
+## 📦 Tech Stack
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
+
 ---
 
 ## 🔧 Projects Overview
@@ -50,12 +54,4 @@ Designed with a clean interface and secure content editing, leveraging Django fo
 
 ---
 
-## 📦 Tech Stack
-
-- **Front-end**: HTML, CSS, JavaScript
-- **Back-end**: Python, Django
-- **Database**: SQLite (via Django ORM)
-- **Other**: Git, Bootstrap, Markdown, JSON APIs
-
----
 
