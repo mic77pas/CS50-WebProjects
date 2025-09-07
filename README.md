@@ -29,6 +29,8 @@ A front-end replica of Google Search that includes:
 - Advanced search page with filters  
 Built to closely match Google's UI/UX using HTML, CSS, and responsive design techniques.
 
+<img width="600" src="https://github.com/user-attachments/assets/5811381b-502a-4c1f-ac1a-2944bfa61e70" />
+
 ### 📧 `mail` — **Email Client**
 A single-page application that mimics Gmail functionality:
 - Compose, send, read, and archive emails
@@ -53,5 +55,6 @@ A Markdown-based encyclopedia that supports:
 Designed with a clean interface and secure content editing, leveraging Django for server-side logic and content rendering.
 
 ---
+
 
 
