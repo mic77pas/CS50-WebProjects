@@ -22,6 +22,10 @@ A Django-powered auction platform where users can:
 - Close auctions and view winner results  
 Implements user authentication and dynamic listing updates using Django’s ORM and templating engine.
 
+<img width="600" src="https://github.com/user-attachments/assets/88c073a4-7a0f-42a9-a8a2-ea8cd3324b6e" />
+
+#
+
 ### 🔍 `googlesearch` — **Google Search Clone**
 A front-end replica of Google Search that includes:
 - Standard search results
@@ -63,6 +67,7 @@ Designed with a clean interface and secure content editing, leveraging Django fo
 <img width="600" src="https://github.com/user-attachments/assets/eb74c6af-b6b8-4bbd-b1b0-9da9c0914810" />
 
 ---
+
 
 
 
