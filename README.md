@@ -22,7 +22,8 @@ A Django-powered auction platform where users can:
 - Close auctions and view winner results  
 Implements user authentication and dynamic listing updates using Django’s ORM and templating engine.
 
-<img width="600" src="https://github.com/user-attachments/assets/88c073a4-7a0f-42a9-a8a2-ea8cd3324b6e" />
+<img width="600" src="https://github.com/user-attachments/assets/ddb20a0f-4092-49f8-80ca-e2bdd2c9f8a8" />
+
 
 #
 
@@ -43,6 +44,10 @@ A single-page application that mimics Gmail functionality:
 - Mark messages as read/unread
 - View inbox, sent mail, and archived folders  
 Implemented using JavaScript fetch API and a Django backend for asynchronous communication.
+
+<img width="600" src="https://github.com/user-attachments/assets/2d11f9ca-4d72-4b0b-9911-f97a0b1a0626" />
+
+#
 
 ### 🌐 `network` — **Social Network Site**
 A Twitter-style social platform where users can:
@@ -67,6 +72,7 @@ Designed with a clean interface and secure content editing, leveraging Django fo
 <img width="600" src="https://github.com/user-attachments/assets/eb74c6af-b6b8-4bbd-b1b0-9da9c0914810" />
 
 ---
+
 
 
 
