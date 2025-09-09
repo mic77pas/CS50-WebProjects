@@ -13,6 +13,10 @@ This repository contains a collection of full-stack web applications built as pa
 ### 📄 `capstone` — **ResumeForge**
 A modern AI-assisted resume builder that allows users to create, edit, and export professional resumes. Features include real-time content editing, dynamic section management, and a clean export-ready layout. Designed as the capstone project to integrate full-stack development and product thinking.
 
+<img width="600" src="https://github.com/user-attachments/assets/a75014ce-d056-472c-bd69-3bf5ab07c5d9" />
+
+#
+
 ### 🛒 `commerce` — **E-Commerce Auction Site**
 A Django-powered auction platform where users can:
 - Post product listings with images and descriptions
@@ -72,6 +76,7 @@ Designed with a clean interface and secure content editing, leveraging Django fo
 <img width="600" src="https://github.com/user-attachments/assets/eb74c6af-b6b8-4bbd-b1b0-9da9c0914810" />
 
 ---
+
 
 
 
