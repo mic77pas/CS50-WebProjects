@@ -1,0 +1,153 @@
+{% extends 'builder/base.html' %}
+
+{% block content %}
+<h1>{{ resume.title }}</h1>
+<p>{{ resume.summary }}</p>
+
+<hr>
+
+<h3>Experience</h3>
+<ul class="list-group mb-4">
+  {% for exp in experiences %}
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div>
+        <strong>{{ exp.position }}</strong> at {{ exp.company }}<br>
+        {{ exp.start_date }} – {{ exp.end_date|default:"Present" }}<br>
+        {{ exp.description }}
+      </div>
+      <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-sm btn-danger" name="delete_experience" value="{{ exp.id }}">Delete</button>
+      </form>
+    </li>
+  {% empty %}
+    <li class="list-group-item">No experience listed.</li>
+  {% endfor %}
+</ul>
+
+<h3>Education</h3>
+<ul class="list-group mb-4">
+  {% for edu in education %}
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div>
+        {{ edu.degree }} @ {{ edu.school }}<br>
+        {{ edu.start_year }} – {{ edu.end_year|default:"Present" }}
+      </div>
+      <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-sm btn-danger" name="delete_education" value="{{ edu.id }}">Delete</button>
+      </form>
+    </li>
+  {% empty %}
+    <li class="list-group-item">No education listed.</li>
+  {% endfor %}
+</ul>
+
+<h3>Skills</h3>
+<ul class="list-group mb-4">
+  {% for skill in skills %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>{{ skill.name }}</span>
+      <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-sm btn-danger" name="delete_skill" value="{{ skill.id }}">Delete</button>
+      </form>
+    </li>
+  {% empty %}
+    <li class="list-group-item">No skills listed.</li>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'download_pdf' resume.id %}" class="btn btn-outline-primary">Download PDF</a>
+
+<hr class="my-4">
+
+<h4>Add Work Experience</h4>
+<form method="POST" class="mb-4">
+  {% csrf_token %}
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="{{ exp_form.position.id_for_label }}" class="form-label">Position</label>
+      {{ exp_form.position }}
+    </div>
+    <div class="col-md-6">
+      <label for="{{ exp_form.company.id_for_label }}" class="form-label">Company</label>
+      {{ exp_form.company }}
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="{{ exp_form.description.id_for_label }}" class="form-label">Description</label>
+    {{ exp_form.description }}
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="{{ exp_form.start_date.id_for_label }}" class="form-label">Start Date</label>
+      {{ exp_form.start_date }}
+    </div>
+    <div class="col-md-6">
+      <label for="{{ exp_form.end_date.id_for_label }}" class="form-label">End Date</label>
+      {{ exp_form.end_date }}
+      <small class="form-text text-muted">Leave blank if currently working here.</small>
+    </div>
+  </div>
+
+  <button class="btn btn-primary" name="add_experience">Add Experience</button>
+</form>
+
+<h4 class="mt-4">Add Education</h4>
+<form method="POST" class="mb-4">
+  {% csrf_token %}
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="{{ edu_form.school.id_for_label }}" class="form-label">School</label>
+      {{ edu_form.school }}
+    </div>
+    <div class="col-md-6">
+      <label for="{{ edu_form.degree.id_for_label }}" class="form-label">Degree</label>
+      {{ edu_form.degree }}
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="{{ edu_form.start_year.id_for_label }}" class="form-label">Start Year</label>
+      {{ edu_form.start_year }}
+    </div>
+    <div class="col-md-6">
+      <label for="{{ edu_form.end_year.id_for_label }}" class="form-label">End Year</label>
+      {{ edu_form.end_year }}
+    </div>
+  </div>
+
+  <button class="btn btn-primary" name="add_education">Add Education</button>
+</form>
+
+<h4 class="mt-4">Add Skill</h4>
+<form method="POST" class="mb-4">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="{{ skill_form.name.id_for_label }}" class="form-label">Skill</label>
+    {{ skill_form.name }}
+  </div>
+
+  <button class="btn btn-primary" name="add_skill">Add Skill</button>
+</form>
+
+<hr>
+<h4 class="mt-4">Need help writing bullets?</h4>
+<small class="form-text text-muted">
+  Note: Requires your own OpenAI API key to use. We unfortunately do not store one. (* uses GPT-3.5 model)
+</small>
+
+<textarea id="prompt" class="form-control" rows="3" placeholder="e.g. Led a team of 4 to build..." ></textarea>
+<label class="mt-2">Your OpenAI API Key (optional):</label>
+
+<input type="password" id="user-api-key" class="form-control" placeholder="sk-...">
+<button onclick="fetchAISuggestions()" class="btn btn-secondary mt-2">Get AI Suggestions</button>
+
+<pre id="ai-result" class="mt-3"></pre>
+
+{% endblock %}

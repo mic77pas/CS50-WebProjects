@@ -1,0 +1,20 @@
+{% extends 'builder/base.html' %}
+
+{% block content %}
+<h1>Your Resumes</h1>
+<hr>
+<a href="{% url 'create_resume' %}" class="btn btn-primary mb-3">+ New Resume</a>
+<ul class="list-group">
+    {% for resume in resumes %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="{% url 'resume_detail' resume.id %}">{{ resume.title }}</a>
+            <form method="POST" action="{% url 'delete_resume' resume.id %}">
+                {% csrf_token %}
+                <button class="btn btn-sm btn-danger">Delete</button>
+            </form>
+        </li>
+    {% empty %}
+        <li class="list-group-item">No resumes yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

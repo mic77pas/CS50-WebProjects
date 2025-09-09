@@ -1,0 +1,4 @@
+Django
+python-dotenv
+xhtml2pdf
+openai
