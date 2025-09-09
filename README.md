@@ -48,6 +48,10 @@ A Twitter-style social platform where users can:
 - View a personalized feed of followed users  
 Utilizes Django for backend logic and JavaScript for dynamic front-end interactions including live updates and pagination.
 
+<img width="600" src="https://github.com/user-attachments/assets/28f8274b-3fd6-447c-9af4-08afbeb5a11b" />
+
+#
+
 ### 📚 `wiki` — **Encyclopedia App**
 A Markdown-based encyclopedia that supports:
 - Viewing existing pages
@@ -59,6 +63,7 @@ Designed with a clean interface and secure content editing, leveraging Django fo
 <img width="600" src="https://github.com/user-attachments/assets/eb74c6af-b6b8-4bbd-b1b0-9da9c0914810" />
 
 ---
+
 
 
 
