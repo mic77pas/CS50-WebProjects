@@ -31,6 +31,8 @@ Built to closely match Google's UI/UX using HTML, CSS, and responsive design tec
 
 <img width="600" src="https://github.com/user-attachments/assets/5811381b-502a-4c1f-ac1a-2944bfa61e70" />
 
+#
+
 ### 📧 `mail` — **Email Client**
 A single-page application that mimics Gmail functionality:
 - Compose, send, read, and archive emails
@@ -54,7 +56,10 @@ A Markdown-based encyclopedia that supports:
 - Viewing random articles  
 Designed with a clean interface and secure content editing, leveraging Django for server-side logic and content rendering.
 
+<img width="600" src="https://github.com/user-attachments/assets/eb74c6af-b6b8-4bbd-b1b0-9da9c0914810" />
+
 ---
+
 
 
 
