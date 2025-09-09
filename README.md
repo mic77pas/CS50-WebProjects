@@ -22,6 +22,11 @@ A Django-powered auction platform where users can:
 - Close auctions and view winner results  
 Implements user authentication and dynamic listing updates using Django’s ORM and templating engine.
 
+<img width="600" src="https://github.com/user-attachments/assets/ddb20a0f-4092-49f8-80ca-e2bdd2c9f8a8" />
+
+
+#
+
 ### 🔍 `googlesearch` — **Google Search Clone**
 A front-end replica of Google Search that includes:
 - Standard search results
@@ -29,12 +34,20 @@ A front-end replica of Google Search that includes:
 - Advanced search page with filters  
 Built to closely match Google's UI/UX using HTML, CSS, and responsive design techniques.
 
+<img width="600" src="https://github.com/user-attachments/assets/5811381b-502a-4c1f-ac1a-2944bfa61e70" />
+
+#
+
 ### 📧 `mail` — **Email Client**
 A single-page application that mimics Gmail functionality:
 - Compose, send, read, and archive emails
 - Mark messages as read/unread
 - View inbox, sent mail, and archived folders  
 Implemented using JavaScript fetch API and a Django backend for asynchronous communication.
+
+<img width="600" src="https://github.com/user-attachments/assets/2d11f9ca-4d72-4b0b-9911-f97a0b1a0626" />
+
+#
 
 ### 🌐 `network` — **Social Network Site**
 A Twitter-style social platform where users can:
@@ -44,6 +57,10 @@ A Twitter-style social platform where users can:
 - View a personalized feed of followed users  
 Utilizes Django for backend logic and JavaScript for dynamic front-end interactions including live updates and pagination.
 
+<img width="600" src="https://github.com/user-attachments/assets/28f8274b-3fd6-447c-9af4-08afbeb5a11b" />
+
+#
+
 ### 📚 `wiki` — **Encyclopedia App**
 A Markdown-based encyclopedia that supports:
 - Viewing existing pages
@@ -52,6 +69,13 @@ A Markdown-based encyclopedia that supports:
 - Viewing random articles  
 Designed with a clean interface and secure content editing, leveraging Django for server-side logic and content rendering.
 
+<img width="600" src="https://github.com/user-attachments/assets/eb74c6af-b6b8-4bbd-b1b0-9da9c0914810" />
+
 ---
+
+
+
+
+
 
 
