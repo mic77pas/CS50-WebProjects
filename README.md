@@ -75,7 +75,19 @@ Designed with a clean interface and secure content editing, leveraging Django fo
 
 <img width="600" src="https://github.com/user-attachments/assets/eb74c6af-b6b8-4bbd-b1b0-9da9c0914810" />
 
+#
+
+## 🚀 How to Run
+
+Below are the respective commands to start each project:
+
+| Project                                                                                           | Start Command(s)                                        |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| **googlesearch**       | n/a (open index.html)                                             |
+| **capstone**<br />**commerce**<br />**mail**<br />**network**<br />**wiki**                                                                      | `python manage.py migrate`<br>`python manage.py runserver`     |
+
 ---
+
 
 
 
